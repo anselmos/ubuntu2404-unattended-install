@@ -21,3 +21,14 @@
           - ack
         state: latest
         update_cache: true
+    - name: Remove snap apps
+      become: true
+      command: "snap remove chromium firefox cups gnome-42-2204 core22 gtk-common-themes"
+
+    - name: Remove snap bare
+      become: true
+      command: "snap remove bare && snap remove snapd && sudo apt remove -y snapd"
+
+    - name: Install firefox with mozilla repo
+      become: true
+      command: "bash scripts/install-firefox.sh"
