@@ -13,7 +13,6 @@
         pkg:
           - curl
           - vim
-          - nvim
           - git
           - htop
           - iotop
