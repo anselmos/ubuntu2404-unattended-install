@@ -32,3 +32,7 @@
     - name: Install firefox with mozilla repo
       become: true
       command: "bash scripts/install-firefox.sh"
+
+    - name: Install Obsidian
+      package:
+        deb: deb/obsidian_1.7.4_amd64.deb
